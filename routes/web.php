@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ComunaController;
 use App\Http\Controllers\DepartamentoController;
 use App\Http\Controllers\MunicipioController;
+use App\Http\Controllers\PaisController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +29,4 @@ Route::put('/comunas/{comuna}',[ComunaController::class, 'update'])->name('comun
 Route::get('/comunas/{comuna}/edit', [ComunaController::class, 'edit'])->name('comunas.edit');
 Route::get('/departamentos', [DepartamentoController::class, 'index'])->name('departamentos.index');
 Route::get('/municipios', [MunicipioController::class, 'index'])->name('municipios.index');
+Route::get('/paises', [PaisController::class, 'index'])->name('paises.index');
