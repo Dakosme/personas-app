@@ -29,7 +29,7 @@
             </div>
             
             <label for="municipio">Municipalidad</label>
-            <select class="form-select" name="codigo" id="municipio" required>
+            <select class="form-select" name="municipio" id="municipio" required>
                 <option select disabled value="">Escoge una...</option>
                 @foreach ($municipios as $municipio)
                     @if($municipio->muni_codi == $comuna->muni_codi)

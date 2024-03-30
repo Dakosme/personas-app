@@ -46,7 +46,7 @@ class ComunaController extends Controller
     {
         $comuna = new Comuna();
         $comuna->comu_nomb = $request->name;
-        $comuna->muni_codi = $request->id;
+        $comuna->muni_codi = $request->municipio;
         $comuna->save();
 
         $comunas = DB::table('tb_comuna')
@@ -93,7 +93,7 @@ class ComunaController extends Controller
     {
         $comuna = Comuna::find($id);
         $comuna->comu_nomb = $request->name;
-        $comuna->muni_codi = $request->id;
+        $comuna->muni_codi = $request->municipio;
         $comuna->save();
 
         $comunas = DB::table('tb_comuna')
