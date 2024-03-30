@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Departamentos;
-use Illminate\Support\Facades\DB;
+use Illuminate\Support\Facades\DB;
 
 class DepartamentoController extends Controller
 {
@@ -15,8 +15,11 @@ class DepartamentoController extends Controller
      */
     public function index()
     {
-        $departamentos = Departamentos::all();
-        return view('departamento.index',['departamentos'=>$departamentos]);
+        $departamentos = DB::table('tb_departamento')
+            ->join('tb_pais', 'tb_departamento.pais_codi', '=', 'tb_pais.pais_codi')
+            ->select('tb_departamento.*', 'tb_pais.pais_nomb')
+            ->get();
+        return view('departamento.index', ['departamentos'=>$departamentos]);
     }
 
     /**
