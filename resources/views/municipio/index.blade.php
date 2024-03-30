@@ -8,27 +8,26 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <title>Listado de Departamentos</title>
+    <title>Listado de Municipios</title>
   </head>
   <body>
     <div class="container">
-        <h1>Listado de departamentos</h1>
-        <a href="{{route('comunas.create')}}" class="btn btn-success">Agregar</a>
+        <h1>Listado de Municipios</h1>
         <table class="table">
             <thead>
                 <tr>
                     <th scope="col">Codigo</th>
+                    <th scope="col">Municipio</th>
                     <th scope="col">Departamento</th>
-                    <th scope="col">Pais</th>
                     <th scope="col">Acciones</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach($departamentos as $departamento)
+                @foreach($municipios as $municipio)
                     <tr>
-                        <th scope="row">{{$departamento->depa_codi}}</th>
-                        <td>{{$departamento->depa_nomb}}</td>
-                        <td>{{$departamento->pais_codi}}</td>
+                        <th scope="row">{{$municipio->muni_codi}}</th>
+                        <td>{{$municipio->muni_nomb}}</td>
+                        <td>{{$municipio->depa_codi}}</td>
                         <td><span>Actions</span></td>
                     </tr>
                 @endforeach

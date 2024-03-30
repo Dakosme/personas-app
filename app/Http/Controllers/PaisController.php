@@ -3,10 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Departamentos;
-use Illminate\Support\Facades\DB;
 
-class DepartamentoController extends Controller
+class PaisController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +13,7 @@ class DepartamentoController extends Controller
      */
     public function index()
     {
-        $departamentos = Departamentos::all();
-        return view('departamento.index',['departamentos'=>$departamentos]);
+        //
     }
 
     /**

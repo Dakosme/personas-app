@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Departamentos;
-use Illminate\Support\Facades\DB;
+use App\Models\Municipio;
+use illuminate\Support\Facades\DB;
 
-class DepartamentoController extends Controller
+class MunicipioController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,8 @@ class DepartamentoController extends Controller
      */
     public function index()
     {
-        $departamentos = Departamentos::all();
-        return view('departamento.index',['departamentos'=>$departamentos]);
+        $municipios = Municipio::all();
+        return view('municipio.index', ['municipios'=>$municipios]);
     }
 
     /**
