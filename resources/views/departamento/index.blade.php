@@ -13,6 +13,7 @@
   <body>
     <div class="container">
         <h1>Listado de Departamentos</h1>
+        <a href="{{route('departamentos.create')}}" class="btn btn-success">Agregar</a>
         <table class="table">
             <thead>
                 <tr>
